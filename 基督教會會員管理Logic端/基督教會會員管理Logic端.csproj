@@ -10,6 +10,11 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.119" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\基督教會會員管理DAL類別庫\基督教會會員管理DAL類別庫.csproj" />
   </ItemGroup>
 
 </Project>
