@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ChristianChurchMemberPanel</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\基督教會會員管理DAL類別庫\基督教會會員管理DAL類別庫.csproj" />
+    <ProjectReference Include="..\基督教會會員管理Logic端\基督教會會員管理Logic端.csproj" />
+  </ItemGroup>
+
+</Project>

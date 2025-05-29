@@ -224,15 +224,19 @@ namespace ChristianChurchMemberLogic.SQLiteLayer
         }
 
         // STATUSES CRUD Operations
-        public IEnumerable<Statuses> GetAllStatuses()
+        public IEnumerable<Statuses> GetAllStatuses(string ItemCategoryName = "")
         {
             using (var connection = GetConnection())
             {
-                return connection.Query<Statuses>("SELECT * FROM STATUSES");
+                if (string.IsNullOrEmpty(ItemCategoryName))
+                {
+                    return connection.Query<Statuses>("SELECT * FROM STATUSES");
+                }
+                return connection.Query<Statuses>("SELECT * FROM STATUSES WHERE ITEMNAME = @ItemCategoryName", new { ItemCategoryName });
             }
         }
 
-        public Statuses GetStatusByIds(string itemName, string itemValue)
+        public Statuses? GetStatusByIds(string itemName, string itemValue)
         {
             using (var connection = GetConnection())
             {
